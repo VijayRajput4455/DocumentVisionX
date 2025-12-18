@@ -1,0 +1,646 @@
+[2025-12-15 22:37:03] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-15 22:37:04] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-15 22:41:10] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-15 22:41:11] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-15 22:41:34] [ERROR] [apps.endpoints.aadhar] Aadhaar extraction failed: 'AadharExtractor' object has no attribute 'extract'
+[2025-12-15 22:42:34] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-15 22:42:36] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-15 22:42:41] [INFO] [src.documents.AadharExtracter] Starting Aadhaar extraction
+[2025-12-15 22:42:41] [INFO] [src.documents.AadharExtracter] Starting OCR on image with rotations
+[2025-12-15 22:42:56] [INFO] [src.documents.AadharExtracter] OCR completed successfully
+[2025-12-15 22:42:56] [INFO] [src.documents.AadharExtracter] Aadhaar number detected
+[2025-12-15 22:42:56] [INFO] [src.documents.AadharExtracter] Father/Spouse name detected
+[2025-12-15 22:42:56] [INFO] [src.documents.AadharExtracter] Date of Birth detected
+[2025-12-15 22:42:56] [INFO] [src.documents.AadharExtracter] Gender detected
+[2025-12-15 22:42:56] [INFO] [src.documents.AadharExtracter] Address detected
+[2025-12-15 22:42:56] [INFO] [src.documents.AadharExtracter] User name detected (pattern match)
+[2025-12-15 22:42:56] [INFO] [src.documents.AadharExtracter] Aadhaar extraction completed
+[2025-12-15 22:42:56] [INFO] [apps.endpoints.aadhar] Aadhaar extraction successful
+[2025-12-15 22:47:07] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-15 22:47:08] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-15 23:18:40] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-15 23:18:40] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-15 23:18:41] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-15 23:19:37] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-15 23:19:37] [ERROR] [apps.endpoints.aadhar] Aadhaar extraction failed: 'AadharExtractor' object has no attribute 'extract'
+[2025-12-15 23:20:34] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-15 23:20:34] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-15 23:20:35] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-15 23:20:48] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-15 23:20:48] [INFO] [src.documents.AadharExtracter] Starting Aadhaar extraction
+[2025-12-15 23:20:48] [INFO] [src.documents.AadharExtracter] Starting OCR on image with rotations
+[2025-12-15 23:21:02] [INFO] [src.documents.AadharExtracter] OCR completed successfully
+[2025-12-15 23:21:02] [INFO] [src.documents.AadharExtracter] Aadhaar number detected
+[2025-12-15 23:21:02] [INFO] [src.documents.AadharExtracter] Father/Spouse name detected
+[2025-12-15 23:21:02] [INFO] [src.documents.AadharExtracter] Date of Birth detected
+[2025-12-15 23:21:02] [INFO] [src.documents.AadharExtracter] Gender detected
+[2025-12-15 23:21:02] [INFO] [src.documents.AadharExtracter] Address detected
+[2025-12-15 23:21:02] [INFO] [src.documents.AadharExtracter] User name detected (pattern match)
+[2025-12-15 23:21:02] [INFO] [src.documents.AadharExtracter] Aadhaar extraction completed
+[2025-12-15 23:21:02] [INFO] [apps.endpoints.aadhar] Aadhaar extraction successful
+[2025-12-16 00:05:15] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:05:34] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:05:52] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:05:52] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:06:10] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:06:10] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:06:11] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:06:14] [INFO] [apps.main] Root endpoint accessed
+[2025-12-16 00:09:33] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:09:33] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:09:54] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:09:54] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:10:13] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:10:13] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:10:14] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:10:15] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:10:39] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-16 00:10:39] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 1.37 ms
+[2025-12-16 00:10:40] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-16 00:10:40] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 28.48 ms
+[2025-12-16 00:11:05] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:11:05] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:11:06] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:11:08] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:11:12] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-16 00:11:12] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 1.51 ms
+[2025-12-16 00:11:12] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-16 00:11:12] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 25.18 ms
+[2025-12-16 00:11:29] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/pancard/extract
+[2025-12-16 00:11:29] [INFO] [apps.endpoints.pancard] Image loaded from uploaded file
+[2025-12-16 00:11:32] [INFO] [src.classification.image_classification] Predicted document type: pancard
+[2025-12-16 00:11:32] [ERROR] [apps.endpoints.pancard] PAN extraction failed: 'PANExtractor' object has no attribute 'extract'
+[2025-12-16 00:11:32] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/pancard/extract Status code: 500 Time: 3438.23 ms
+[2025-12-16 00:12:00] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:12:00] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:12:02] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:12:03] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:12:03] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/pancard/extract
+[2025-12-16 00:12:03] [INFO] [apps.endpoints.pancard] Image loaded from uploaded file
+[2025-12-16 00:12:06] [INFO] [src.classification.image_classification] Predicted document type: pancard
+[2025-12-16 00:12:06] [INFO] [src.documents.PanCardExtracter] Starting PAN extraction process
+[2025-12-16 00:12:06] [INFO] [src.documents.PanCardExtracter] Performing OCR on PAN image
+[2025-12-16 00:12:11] [INFO] [src.documents.PanCardExtracter] Extracting PAN number
+[2025-12-16 00:12:11] [INFO] [src.documents.PanCardExtracter] PAN number detected: IFAPD0845F
+[2025-12-16 00:12:11] [INFO] [src.documents.PanCardExtracter] Extracting Date of Birth
+[2025-12-16 00:12:11] [INFO] [src.documents.PanCardExtracter] DOB detected: 29/02/2004
+[2025-12-16 00:12:11] [INFO] [src.documents.PanCardExtracter] Extracting Name and Father's Name
+[2025-12-16 00:12:11] [INFO] [src.documents.PanCardExtracter] Name and Father name extracted using DOB fallback method
+[2025-12-16 00:12:11] [INFO] [src.documents.PanCardExtracter] PAN extraction completed successfully
+[2025-12-16 00:12:11] [INFO] [apps.endpoints.pancard] PAN extraction successful
+[2025-12-16 00:12:11] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/pancard/extract Status code: 200 Time: 8017.94 ms
+[2025-12-16 00:16:09] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:16:09] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:16:10] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:16:11] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:17:05] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:17:05] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:17:05] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-16 00:17:07] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:17:08] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:17:22] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:17:22] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:17:22] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-16 00:17:23] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:17:24] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:18:07] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:18:07] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:18:07] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-16 00:18:08] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:18:08] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:18:17] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:18:17] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:18:17] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-16 00:18:18] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:18:18] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:23:10] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:23:10] [INFO] [src.documents.AadharExtracter] Initializing PaddleOCR model
+[2025-12-16 00:23:10] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-16 00:23:11] [INFO] [src.documents.PanCardExtracter] Initializing PANExtractor and loading OCR model
+[2025-12-16 00:23:11] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-16 00:23:18] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/pancard/extract
+[2025-12-16 00:23:18] [INFO] [apps.endpoints.pancard] Image loaded from uploaded file
+[2025-12-16 00:23:21] [INFO] [src.classification.image_classification] Predicted document type: pancard
+[2025-12-16 00:23:21] [INFO] [src.documents.PanCardExtracter] Starting PAN extraction process
+[2025-12-16 00:23:21] [INFO] [src.documents.PanCardExtracter] Performing OCR on PAN image
+[2025-12-16 00:23:25] [INFO] [src.documents.PanCardExtracter] Extracting PAN number
+[2025-12-16 00:23:25] [INFO] [src.documents.PanCardExtracter] PAN number detected: IFAPD0845F
+[2025-12-16 00:23:25] [INFO] [src.documents.PanCardExtracter] Extracting Date of Birth
+[2025-12-16 00:23:25] [INFO] [src.documents.PanCardExtracter] DOB detected: 29/02/2004
+[2025-12-16 00:23:25] [INFO] [src.documents.PanCardExtracter] Extracting Name and Father's Name
+[2025-12-16 00:23:25] [INFO] [src.documents.PanCardExtracter] Name and Father name extracted using DOB fallback method
+[2025-12-16 00:23:25] [INFO] [src.documents.PanCardExtracter] PAN extraction completed successfully
+[2025-12-16 00:23:25] [INFO] [apps.endpoints.pancard] PAN extraction successful
+[2025-12-16 00:23:25] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/pancard/extract Status code: 200 Time: 7689.61 ms
+[2025-12-16 00:24:32] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-16 00:24:32] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-16 00:24:32] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-16 00:24:33] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-16 00:24:33] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 20:57:37] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 20:57:37] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 20:57:37] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 20:57:38] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 20:57:38] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 20:57:39] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-17 20:57:39] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 1.85 ms
+[2025-12-17 20:57:39] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-17 20:57:39] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 28.61 ms
+[2025-12-17 20:58:24] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 20:58:27] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 20:58:27] [WARNING] [apps.endpoints.aadhar] Document type mismatch: Expected string, got aadhar
+[2025-12-17 20:58:27] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 400 Time: 3375.83 ms
+[2025-12-17 20:59:22] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 20:59:23] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 20:59:23] [INFO] [src.documents.AadharExtracter] Starting Aadhaar extraction
+[2025-12-17 20:59:23] [INFO] [src.documents.AadharExtracter] Starting OCR on image with rotations
+[2025-12-17 20:59:36] [INFO] [src.documents.AadharExtracter] OCR completed successfully
+[2025-12-17 20:59:36] [INFO] [src.documents.AadharExtracter] Aadhaar number detected
+[2025-12-17 20:59:36] [INFO] [src.documents.AadharExtracter] Father/Spouse name detected
+[2025-12-17 20:59:36] [INFO] [src.documents.AadharExtracter] Date of Birth detected
+[2025-12-17 20:59:36] [INFO] [src.documents.AadharExtracter] Gender detected
+[2025-12-17 20:59:36] [INFO] [src.documents.AadharExtracter] Address detected
+[2025-12-17 20:59:36] [INFO] [src.documents.AadharExtracter] User name detected (pattern match)
+[2025-12-17 20:59:36] [INFO] [src.documents.AadharExtracter] Aadhaar extraction completed
+[2025-12-17 20:59:36] [INFO] [apps.endpoints.aadhar] Aadhaar extraction successful
+[2025-12-17 20:59:36] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 200 Time: 13998.30 ms
+[2025-12-17 21:16:13] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:16:13] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:16:13] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:16:15] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:16:15] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:18:04] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:18:04] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:18:04] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:18:05] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:18:05] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:18:21] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:18:21] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:18:21] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:18:22] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:18:32] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:18:32] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:18:32] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:18:33] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:19:03] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:19:03] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:19:03] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:19:05] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:19:33] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:19:33] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:19:33] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:19:34] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:19:34] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:19:42] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:19:42] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:19:42] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:19:43] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:19:43] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:21:59] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:21:59] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:21:59] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:22:00] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:22:00] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:24:22] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:25:51] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:26:00] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:30:09] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:30:31] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:30:31] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:30:31] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:30:32] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:30:32] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:32:43] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:32:43] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:32:43] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:32:44] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:32:44] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:32:49] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 21:32:53] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 21:32:53] [ERROR] [apps.endpoints.aadhar] Aadhaar extraction failed
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/apps/endpoints/aadhar.py", line 92, in extract_aadhar
+    image_meta = save_image(
+TypeError: save_image() got an unexpected keyword argument 'document_type'
+[2025-12-17 21:32:53] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 500 Time: 3391.17 ms
+[2025-12-17 21:35:16] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:35:16] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:35:16] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:35:17] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:35:17] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:35:17] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 21:35:20] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 21:35:20] [INFO] [src.documents.AadharExtracter] Starting Aadhaar extraction
+[2025-12-17 21:35:20] [INFO] [src.documents.AadharExtracter] Starting OCR on image with rotations
+[2025-12-17 21:35:35] [INFO] [src.documents.AadharExtracter] OCR completed successfully
+[2025-12-17 21:35:35] [INFO] [src.documents.AadharExtracter] Aadhaar number detected
+[2025-12-17 21:35:35] [INFO] [src.documents.AadharExtracter] Father/Spouse name detected
+[2025-12-17 21:35:35] [INFO] [src.documents.AadharExtracter] Date of Birth detected
+[2025-12-17 21:35:35] [INFO] [src.documents.AadharExtracter] Gender detected
+[2025-12-17 21:35:35] [INFO] [src.documents.AadharExtracter] Address detected
+[2025-12-17 21:35:35] [INFO] [src.documents.AadharExtracter] User name detected (pattern match)
+[2025-12-17 21:35:35] [INFO] [src.documents.AadharExtracter] Aadhaar extraction completed
+[2025-12-17 21:35:35] [INFO] [apps.endpoints.aadhar] Aadhaar extraction successful
+[2025-12-17 21:35:35] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 200 Time: 17822.20 ms
+[2025-12-17 21:36:43] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:36:43] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:36:43] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:36:44] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:36:45] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:36:45] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 21:36:48] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 21:36:48] [ERROR] [apps.endpoints.aadhar] Aadhaar extraction failed
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/apps/endpoints/aadhar.py", line 92, in extract_aadhar
+    image_meta = save_image(
+  File "/home/asus/Desktop/DocumentVisionX/src/utils/image_saver.py", line 40, in save_image
+    "relative_path": f"/{BASE_IMAGE_DIR}/{date_folder}/{filename}",
+NameError: name 'date_folder' is not defined
+[2025-12-17 21:36:48] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 500 Time: 3367.66 ms
+[2025-12-17 21:37:22] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 21:37:22] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 21:37:22] [ERROR] [apps.endpoints.aadhar] Aadhaar extraction failed
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/apps/endpoints/aadhar.py", line 92, in extract_aadhar
+    image_meta = save_image(
+  File "/home/asus/Desktop/DocumentVisionX/src/utils/image_saver.py", line 40, in save_image
+    "relative_path": f"/{BASE_IMAGE_DIR}/{date_folder}/{filename}",
+NameError: name 'date_folder' is not defined
+[2025-12-17 21:37:22] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 500 Time: 276.28 ms
+[2025-12-17 21:37:43] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:37:43] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:37:43] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:37:44] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:37:44] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:37:47] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 21:37:50] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 21:37:50] [ERROR] [apps.endpoints.aadhar] Aadhaar extraction failed
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/apps/endpoints/aadhar.py", line 92, in extract_aadhar
+    image_meta = save_image(
+  File "/home/asus/Desktop/DocumentVisionX/src/utils/image_saver.py", line 40, in save_image
+    "relative_path": f"/{BASE_IMAGE_DIR}/{date_folder}/{filename}",
+NameError: name 'date_folder' is not defined
+[2025-12-17 21:37:50] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 500 Time: 3105.73 ms
+[2025-12-17 21:38:46] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:38:46] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:38:46] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:38:47] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:38:47] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:39:04] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:39:04] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:39:04] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:39:05] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:39:05] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:39:07] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 21:39:10] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 21:39:10] [INFO] [src.documents.AadharExtracter] Starting Aadhaar extraction
+[2025-12-17 21:39:10] [INFO] [src.documents.AadharExtracter] Starting OCR on image with rotations
+[2025-12-17 21:39:24] [INFO] [src.documents.AadharExtracter] OCR completed successfully
+[2025-12-17 21:39:24] [INFO] [src.documents.AadharExtracter] Aadhaar number detected
+[2025-12-17 21:39:24] [INFO] [src.documents.AadharExtracter] Father/Spouse name detected
+[2025-12-17 21:39:24] [INFO] [src.documents.AadharExtracter] Date of Birth detected
+[2025-12-17 21:39:24] [INFO] [src.documents.AadharExtracter] Gender detected
+[2025-12-17 21:39:24] [INFO] [src.documents.AadharExtracter] Address detected
+[2025-12-17 21:39:24] [INFO] [src.documents.AadharExtracter] User name detected (pattern match)
+[2025-12-17 21:39:24] [INFO] [src.documents.AadharExtracter] Aadhaar extraction completed
+[2025-12-17 21:39:24] [INFO] [apps.endpoints.aadhar] Aadhaar extraction successful
+[2025-12-17 21:39:24] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 200 Time: 17169.60 ms
+[2025-12-17 21:50:08] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:50:08] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:50:08] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:50:09] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:50:09] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:51:43] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:51:43] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:51:43] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:51:44] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:51:44] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:54:21] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:54:21] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:54:21] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:54:22] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:54:22] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:54:31] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 21:54:31] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 21:54:31] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 21:54:32] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 21:54:32] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 21:55:06] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/pancard/extract
+[2025-12-17 21:55:06] [ERROR] [apps.endpoints.pancard] PAN extraction failed
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/src/utils/image_loader.py", line 23, in load_image
+    response = urllib.request.urlopen(image_source)
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 322, in __init__
+    self.full_url = url
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 348, in full_url
+    self._parse()
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '/storage/kyc_images/aadhar/aadhar_982ce44c-3f72-4cdb-9ba6-6a72de5411d5.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/apps/endpoints/pancard.py", line 53, in extract_pan
+    image = load_image(image_url)
+  File "/home/asus/Desktop/DocumentVisionX/src/utils/image_loader.py", line 31, in load_image
+    raise ValueError(f"Cannot load image from source '{image_source}': {e}")
+ValueError: Cannot load image from source '/storage/kyc_images/aadhar/aadhar_982ce44c-3f72-4cdb-9ba6-6a72de5411d5.png': unknown url type: '/storage/kyc_images/aadhar/aadhar_982ce44c-3f72-4cdb-9ba6-6a72de5411d5.png'
+[2025-12-17 21:55:06] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/pancard/extract Status code: 500 Time: 13.11 ms
+[2025-12-17 21:55:17] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/pancard/extract
+[2025-12-17 21:55:17] [ERROR] [apps.endpoints.pancard] PAN extraction failed
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/src/utils/image_loader.py", line 23, in load_image
+    response = urllib.request.urlopen(image_source)
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 322, in __init__
+    self.full_url = url
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 348, in full_url
+    self._parse()
+  File "/home/asus/anaconda3/envs/docvision/lib/python3.10/urllib/request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '/storage/kyc_images/aadhar/aadhar_982ce44c-3f72-4cdb-9ba6-6a72de5411d5.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/apps/endpoints/pancard.py", line 53, in extract_pan
+    image = load_image(image_url)
+  File "/home/asus/Desktop/DocumentVisionX/src/utils/image_loader.py", line 31, in load_image
+    raise ValueError(f"Cannot load image from source '{image_source}': {e}")
+ValueError: Cannot load image from source '/storage/kyc_images/aadhar/aadhar_982ce44c-3f72-4cdb-9ba6-6a72de5411d5.png': unknown url type: '/storage/kyc_images/aadhar/aadhar_982ce44c-3f72-4cdb-9ba6-6a72de5411d5.png'
+[2025-12-17 21:55:17] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/pancard/extract Status code: 500 Time: 3.34 ms
+[2025-12-17 21:55:36] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/media/images/aadhar//storage/kyc_images/aadhar/aadhar_982ce44c-3f72-4cdb-9ba6-6a72de5411d5.png
+[2025-12-17 21:55:36] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/media/images/aadhar//storage/kyc_images/aadhar/aadhar_982ce44c-3f72-4cdb-9ba6-6a72de5411d5.png Status code: 404 Time: 0.90 ms
+[2025-12-17 23:45:28] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 23:45:28] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 23:45:28] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 23:45:29] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 23:45:29] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 23:45:30] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-17 23:45:30] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 1.84 ms
+[2025-12-17 23:45:30] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-17 23:45:30] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 27.73 ms
+[2025-12-17 23:45:56] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/aadhar/extract
+[2025-12-17 23:45:56] [INFO] [apps.endpoints.aadhar] PAN image loaded from uploaded file
+[2025-12-17 23:46:00] [INFO] [src.classification.image_classification] Predicted document type: aadhar
+[2025-12-17 23:46:00] [INFO] [apps.endpoints.aadhar] Aadhaar image saved | id=f6cb0951-7bdb-4569-8636-b9967c5d50da | path=/storage/kyc_images/aadhar/aadhar_f6cb0951-7bdb-4569-8636-b9967c5d50da.png
+[2025-12-17 23:46:00] [INFO] [src.documents.AadharExtracter] Starting Aadhaar extraction
+[2025-12-17 23:46:00] [INFO] [src.documents.AadharExtracter] Starting OCR on image with rotations
+[2025-12-17 23:46:14] [INFO] [src.documents.AadharExtracter] OCR completed successfully
+[2025-12-17 23:46:14] [INFO] [src.documents.AadharExtracter] Aadhaar number detected
+[2025-12-17 23:46:14] [INFO] [src.documents.AadharExtracter] Father/Spouse name detected
+[2025-12-17 23:46:14] [INFO] [src.documents.AadharExtracter] Date of Birth detected
+[2025-12-17 23:46:14] [INFO] [src.documents.AadharExtracter] Gender detected
+[2025-12-17 23:46:14] [INFO] [src.documents.AadharExtracter] Address detected
+[2025-12-17 23:46:14] [INFO] [src.documents.AadharExtracter] User name detected (pattern match)
+[2025-12-17 23:46:14] [INFO] [src.documents.AadharExtracter] Aadhaar extraction completed
+[2025-12-17 23:46:14] [INFO] [apps.endpoints.aadhar] Aadhaar extraction successful
+[2025-12-17 23:46:14] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/aadhar/extract Status code: 200 Time: 17471.05 ms
+[2025-12-17 23:46:57] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/media/images/aadhar/aadhar_f6cb0951-7bdb-4569-8636-b9967c5d50da.png
+[2025-12-17 23:46:57] [INFO] [apps.endpoints.media] Serving image: storage/kyc_images/aadhar/aadhar_f6cb0951-7bdb-4569-8636-b9967c5d50da.png
+[2025-12-17 23:46:57] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/media/images/aadhar/aadhar_f6cb0951-7bdb-4569-8636-b9967c5d50da.png Status code: 200 Time: 12.47 ms
+[2025-12-17 23:47:09] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/media/images/aadhar//storage/kyc_images/aadhar/aadhar_f6cb0951-7bdb-4569-8636-b9967c5d50da.png
+[2025-12-17 23:47:09] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/media/images/aadhar//storage/kyc_images/aadhar/aadhar_f6cb0951-7bdb-4569-8636-b9967c5d50da.png Status code: 404 Time: 0.78 ms
+[2025-12-17 23:51:03] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 23:51:03] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 23:51:03] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 23:51:04] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 23:51:04] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-17 23:51:12] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-17 23:51:12] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-17 23:51:12] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-17 23:51:13] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-17 23:51:13] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:16:29] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:16:29] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:16:29] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:16:30] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:16:30] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:16:40] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-18 00:16:40] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 1.44 ms
+[2025-12-18 00:16:41] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-18 00:16:41] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 32.88 ms
+[2025-12-18 00:19:27] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:19:27] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:19:27] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:19:28] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:19:28] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:19:28] [INFO] [src.documents.VoterCardExtractor] Starting Voter card extraction
+[2025-12-18 00:19:28] [INFO] [src.documents.VoterCardExtractor] Performing OCR on voter card
+[2025-12-18 00:19:35] [INFO] [src.documents.VoterCardExtractor] EPIC number detected
+[2025-12-18 00:19:35] [INFO] [src.documents.VoterCardExtractor] Voter name detected
+[2025-12-18 00:19:35] [INFO] [src.documents.VoterCardExtractor] Voter card extraction completed
+[2025-12-18 00:19:35] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:19:35] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:19:35] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-18 00:19:35] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 2.92 ms
+[2025-12-18 00:19:35] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-18 00:19:35] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 29.99 ms
+[2025-12-18 00:19:38] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-18 00:19:38] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 1.24 ms
+[2025-12-18 00:19:39] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-18 00:19:39] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 0.89 ms
+[2025-12-18 00:20:34] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:20:34] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:20:34] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:20:36] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:20:36] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:20:36] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:31:45] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:31:45] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:31:45] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:31:46] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:31:46] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:31:46] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:32:44] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:32:44] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:32:44] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:32:45] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:32:45] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:32:45] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:32:56] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/voter/extract
+[2025-12-18 00:32:56] [INFO] [apps.endpoints.votercard] Voter image loaded from uploaded file
+[2025-12-18 00:32:59] [INFO] [src.classification.image_classification] Predicted document type: other_images
+[2025-12-18 00:33:00] [INFO] [apps.endpoints.votercard] Voter image saved | id=0ec2a997-8f21-4724-b57d-d5a0d8fca807 | path=/storage/kyc_images/other_images/other_images_0ec2a997-8f21-4724-b57d-d5a0d8fca807.png
+[2025-12-18 00:33:00] [INFO] [src.documents.VoterCardExtractor] Starting Voter card extraction
+[2025-12-18 00:33:00] [INFO] [src.documents.VoterCardExtractor] Performing OCR on voter card
+[2025-12-18 00:33:07] [INFO] [src.documents.VoterCardExtractor] EPIC number detected
+[2025-12-18 00:33:07] [INFO] [src.documents.VoterCardExtractor] Voter name detected
+[2025-12-18 00:33:07] [INFO] [src.documents.VoterCardExtractor] Voter card extraction completed
+[2025-12-18 00:33:07] [INFO] [apps.endpoints.votercard] Voter extraction successful
+[2025-12-18 00:33:07] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/voter/extract Status code: 200 Time: 11333.05 ms
+[2025-12-18 00:34:21] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:34:21] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:34:21] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:34:22] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:34:22] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:34:22] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:34:22] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/voter/extract
+[2025-12-18 00:34:23] [INFO] [apps.endpoints.votercard] Voter image loaded from uploaded file
+[2025-12-18 00:34:26] [INFO] [src.classification.image_classification] Predicted document type: other_images
+[2025-12-18 00:34:26] [INFO] [apps.endpoints.votercard] Voter image saved | id=caef376a-ef5a-4a5d-aac3-44d10f617630 | path=/storage/kyc_images/other_images/other_images_caef376a-ef5a-4a5d-aac3-44d10f617630.png
+[2025-12-18 00:34:26] [INFO] [src.documents.VoterCardExtractor] Starting Voter card extraction
+[2025-12-18 00:34:26] [INFO] [src.documents.VoterCardExtractor] Performing OCR on voter card
+[2025-12-18 00:34:34] [INFO] [src.documents.VoterCardExtractor] EPIC number detected
+[2025-12-18 00:34:34] [INFO] [src.documents.VoterCardExtractor] Voter name detected
+[2025-12-18 00:34:34] [INFO] [src.documents.VoterCardExtractor] Voter card extraction completed
+[2025-12-18 00:34:34] [INFO] [apps.endpoints.votercard] Voter extraction successful
+[2025-12-18 00:34:34] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/voter/extract Status code: 200 Time: 11045.43 ms
+[2025-12-18 00:36:18] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:36:18] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:36:18] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:36:19] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:36:19] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:36:19] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:36:24] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/voter/extract
+[2025-12-18 00:36:24] [INFO] [apps.endpoints.votercard] Voter image loaded from uploaded file
+[2025-12-18 00:36:27] [INFO] [src.classification.image_classification] Predicted document type: other_images
+[2025-12-18 00:36:27] [INFO] [apps.endpoints.votercard] Voter image saved | id=0a0ff398-481c-4d56-b103-d08c5af84b69 | path=/storage/kyc_images/other_images/other_images_0a0ff398-481c-4d56-b103-d08c5af84b69.png
+[2025-12-18 00:36:27] [INFO] [src.documents.VoterCardExtractor] Starting Voter card extraction
+[2025-12-18 00:36:27] [INFO] [src.documents.VoterCardExtractor] Performing OCR on voter card
+[2025-12-18 00:36:35] [INFO] [src.documents.VoterCardExtractor] EPIC number detected
+[2025-12-18 00:36:35] [INFO] [src.documents.VoterCardExtractor] Voter name detected
+[2025-12-18 00:36:35] [INFO] [src.documents.VoterCardExtractor] Voter card extraction completed
+[2025-12-18 00:36:35] [INFO] [apps.endpoints.votercard] Voter extraction successful
+[2025-12-18 00:36:35] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/voter/extract Status code: 200 Time: 11130.90 ms
+[2025-12-18 00:39:00] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:39:00] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:39:00] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:39:01] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:39:01] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:39:01] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:39:26] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/voter/extract
+[2025-12-18 00:39:26] [INFO] [apps.endpoints.votercard] Voter image loaded from uploaded file
+[2025-12-18 00:39:29] [INFO] [src.classification.image_classification] Predicted document type: other_images
+[2025-12-18 00:39:29] [INFO] [apps.endpoints.votercard] Voter image saved | id=a947b970-61b7-472b-a288-fed0b857cd55 | path=/storage/kyc_images/other_images/other_images_a947b970-61b7-472b-a288-fed0b857cd55.png
+[2025-12-18 00:39:29] [INFO] [src.documents.VoterCardExtractor] Starting Voter card extraction
+[2025-12-18 00:39:29] [INFO] [src.documents.VoterCardExtractor] Performing OCR on voter card
+[2025-12-18 00:39:37] [INFO] [src.documents.VoterCardExtractor] EPIC number detected
+[2025-12-18 00:39:37] [INFO] [src.documents.VoterCardExtractor] Voter name detected
+[2025-12-18 00:39:37] [ERROR] [apps.endpoints.votercard] Voter extraction failed
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/apps/endpoints/votercard.py", line 115, in extract_voter
+    ocr_result = extractor.extract_details(image)
+  File "/home/asus/Desktop/DocumentVisionX/src/documents/VoterCardExtractor.py", line 226, in extract_details
+    self._extract_father_name(lines)
+AttributeError: 'VoterCardExtractor' object has no attribute '_extract_father_name'. Did you mean: '_extract_dob_or_age'?
+[2025-12-18 00:39:37] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/voter/extract Status code: 500 Time: 11122.56 ms
+[2025-12-18 00:40:01] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/voter/extract
+[2025-12-18 00:40:01] [INFO] [apps.endpoints.votercard] Voter image loaded from uploaded file
+[2025-12-18 00:40:01] [INFO] [src.classification.image_classification] Predicted document type: other_images
+[2025-12-18 00:40:01] [INFO] [apps.endpoints.votercard] Voter image saved | id=a1bed6fe-469a-482e-8930-0104859df2f5 | path=/storage/kyc_images/other_images/other_images_a1bed6fe-469a-482e-8930-0104859df2f5.png
+[2025-12-18 00:40:01] [INFO] [src.documents.VoterCardExtractor] Starting Voter card extraction
+[2025-12-18 00:40:01] [INFO] [src.documents.VoterCardExtractor] Performing OCR on voter card
+[2025-12-18 00:40:08] [INFO] [src.documents.VoterCardExtractor] EPIC number detected
+[2025-12-18 00:40:08] [INFO] [src.documents.VoterCardExtractor] Voter name detected
+[2025-12-18 00:40:08] [ERROR] [apps.endpoints.votercard] Voter extraction failed
+Traceback (most recent call last):
+  File "/home/asus/Desktop/DocumentVisionX/apps/endpoints/votercard.py", line 115, in extract_voter
+    ocr_result = extractor.extract_details(image)
+  File "/home/asus/Desktop/DocumentVisionX/src/documents/VoterCardExtractor.py", line 226, in extract_details
+    self._extract_father_name(lines)
+AttributeError: 'VoterCardExtractor' object has no attribute '_extract_father_name'. Did you mean: '_extract_dob_or_age'?
+[2025-12-18 00:40:08] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/voter/extract Status code: 500 Time: 6650.26 ms
+[2025-12-18 00:40:48] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:40:48] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:40:48] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:40:49] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:40:49] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:40:49] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:40:49] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/voter/extract
+[2025-12-18 00:40:49] [INFO] [apps.endpoints.votercard] Voter image loaded from uploaded file
+[2025-12-18 00:40:52] [INFO] [src.classification.image_classification] Predicted document type: other_images
+[2025-12-18 00:40:52] [INFO] [apps.endpoints.votercard] Voter image saved | id=ef5603ae-1dc6-466b-a043-eab47a627e9f | path=/storage/kyc_images/other_images/other_images_ef5603ae-1dc6-466b-a043-eab47a627e9f.png
+[2025-12-18 00:40:52] [INFO] [src.documents.VoterCardExtractor] Starting Voter card extraction
+[2025-12-18 00:40:52] [INFO] [src.documents.VoterCardExtractor] Performing OCR on voter card
+[2025-12-18 00:41:00] [INFO] [src.documents.VoterCardExtractor] EPIC number detected
+[2025-12-18 00:41:00] [INFO] [src.documents.VoterCardExtractor] Voter name detected
+[2025-12-18 00:41:00] [INFO] [src.documents.VoterCardExtractor] Extracting Name and Father's Name
+[2025-12-18 00:41:00] [INFO] [src.documents.VoterCardExtractor] Name and Father name extracted using label-based method
+[2025-12-18 00:41:00] [INFO] [src.documents.VoterCardExtractor] Voter card extraction completed
+[2025-12-18 00:41:00] [INFO] [apps.endpoints.votercard] Voter extraction successful
+[2025-12-18 00:41:00] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/voter/extract Status code: 200 Time: 10788.51 ms
+[2025-12-18 00:42:55] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 00:42:55] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 00:42:55] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 00:42:56] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 00:42:56] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 00:42:56] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 00:42:57] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-18 00:42:57] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 1.29 ms
+[2025-12-18 00:42:58] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-18 00:42:58] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 33.05 ms
+[2025-12-18 00:43:24] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/voter/extract
+[2025-12-18 00:43:24] [INFO] [apps.endpoints.votercard] Voter image loaded from uploaded file
+[2025-12-18 00:43:27] [INFO] [src.classification.image_classification] Predicted document type: other_images
+[2025-12-18 00:43:27] [INFO] [apps.endpoints.votercard] Voter image saved | id=d2f0bb34-85a1-46a4-820b-55bbdc089cf1 | path=/storage/kyc_images/other_images/other_images_d2f0bb34-85a1-46a4-820b-55bbdc089cf1.png
+[2025-12-18 00:43:27] [INFO] [src.documents.VoterCardExtractor] Starting Voter card extraction
+[2025-12-18 00:43:27] [INFO] [src.documents.VoterCardExtractor] Performing OCR on voter card
+[2025-12-18 00:43:35] [INFO] [src.documents.VoterCardExtractor] EPIC number detected
+[2025-12-18 00:43:35] [INFO] [src.documents.VoterCardExtractor] Voter name detected
+[2025-12-18 00:43:35] [INFO] [src.documents.VoterCardExtractor] Extracting Name and Father's Name
+[2025-12-18 00:43:35] [INFO] [src.documents.VoterCardExtractor] Name and Father name extracted using label-based method
+[2025-12-18 00:43:35] [INFO] [src.documents.VoterCardExtractor] Voter card extraction completed
+[2025-12-18 00:43:35] [INFO] [apps.endpoints.votercard] Voter extraction successful
+[2025-12-18 00:43:35] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/voter/extract Status code: 200 Time: 10872.84 ms
+[2025-12-18 22:55:12] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 22:55:12] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 22:55:12] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 22:55:13] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 22:55:13] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 22:55:34] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 22:55:34] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 22:55:34] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 22:55:35] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 22:55:35] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 22:55:48] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 22:55:48] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 22:55:48] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 22:55:49] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 22:55:49] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 22:57:09] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 22:57:09] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 22:57:09] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 22:57:10] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 22:57:10] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 22:58:17] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 22:58:17] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 22:58:17] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 22:58:18] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 22:58:18] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 22:59:26] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 22:59:26] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 22:59:26] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 22:59:27] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 22:59:27] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 22:59:29] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 23:00:48] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/docs
+[2025-12-18 23:00:48] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/docs Status code: 200 Time: 1.62 ms
+[2025-12-18 23:00:49] [INFO] [apps.main] Incoming request: GET http://127.0.0.1:8000/openapi.json
+[2025-12-18 23:00:49] [INFO] [apps.main] Completed request: GET http://127.0.0.1:8000/openapi.json Status code: 200 Time: 42.49 ms
+[2025-12-18 23:01:10] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/bank/extract
+[2025-12-18 23:01:10] [INFO] [apps.endpoints.bank] Bank document image loaded from file
+[2025-12-18 23:01:13] [INFO] [src.classification.image_classification] Predicted document type: check_book
+[2025-12-18 23:01:13] [WARNING] [apps.endpoints.bank] Document type mismatch: Expected other_images, got check_book
+[2025-12-18 23:01:13] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/bank/extract Status code: 400 Time: 3522.44 ms
+[2025-12-18 23:02:11] [INFO] [src.classification.image_classification] YOLOv8 model loaded for classification
+[2025-12-18 23:02:11] [INFO] [src.documents.AadharExtracter] Initializing AadharExtractor
+[2025-12-18 23:02:11] [INFO] [src.ocr.paddle_ocr_singleton] Initializing shared PaddleOCR model
+[2025-12-18 23:02:12] [INFO] [src.documents.PanCardExtracter] Initializing PanCardExtractor
+[2025-12-18 23:02:12] [INFO] [src.documents.VoterCardExtractor] Initializing VoterCardExtractor
+[2025-12-18 23:02:14] [INFO] [apps.main] FastAPI application initialized with all endpoints
+[2025-12-18 23:02:15] [INFO] [apps.main] Incoming request: POST http://127.0.0.1:8000/bank/extract
+[2025-12-18 23:02:15] [INFO] [apps.endpoints.bank] Bank document image loaded from file
+[2025-12-18 23:02:18] [INFO] [src.classification.image_classification] Predicted document type: check_book
+[2025-12-18 23:02:18] [INFO] [apps.endpoints.bank] Bank document image saved | id=ea491950-2e4b-4f1c-b8f4-9eef611597a9 | path=/storage/kyc_images/check_book/check_book_ea491950-2e4b-4f1c-b8f4-9eef611597a9.png
+[2025-12-18 23:02:22] [INFO] [apps.endpoints.bank] Bank extraction successful
+[2025-12-18 23:02:22] [INFO] [apps.main] Completed request: POST http://127.0.0.1:8000/bank/extract Status code: 200 Time: 7406.06 ms
