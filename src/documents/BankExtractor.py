@@ -1,12 +1,29 @@
-# src/documents/BankExtractor.py
+from src.config import BANK_LLM_ENDPOINT, BANK_LLM_MODEL, BANK_LLM_TIMEOUT, OCR_BACKEND
+from src.documents.base_llm_extractor import BaseLLMExtractor
+from src.documents.llm_extractor_utils import (
+    call_llm_json,
+    normalize_with_schema,
+)
+from src.documents.prompts import build_bank_prompt
+from src.documents.schemas import BANK_FIELDS
+from src.documents.validators import apply_bank_validation
+from src.logger import get_logger
 
-import re
-from paddleocr import PaddleOCR
+logger = get_logger(__name__)
 
 
-class BankExtractor:
+class BankExtractor(BaseLLMExtractor):
     def __init__(self):
-        self.ocr = PaddleOCR(use_angle_cls=True, lang="en")
+        super().__init__(
+            ocr_backend=OCR_BACKEND,
+            llm_model=BANK_LLM_MODEL,
+            llm_endpoint=BANK_LLM_ENDPOINT,
+            llm_timeout=BANK_LLM_TIMEOUT,
+            fast_path_rotations=1,
+            full_path_rotations=1,
+            logger=logger,
+            extractor_name="BankExtractor",
+        )
 
         self.bank_names = [
             "STATE BANK OF INDIA",
@@ -19,64 +36,60 @@ class BankExtractor:
             "UNION BANK OF INDIA",
             "INDIAN BANK",
             "YES BANK",
-            "IDFC FIRST BANK"
+            "IDFC FIRST BANK",
         ]
 
-    # -------------------------
-    # OCR
-    # -------------------------
+    def _extract_details_with_llm(self, raw_text, data):
+        prompt = build_bank_prompt(raw_text)
+
+        parsed = call_llm_json(
+            model=self.llm_model,
+            endpoint=self.llm_endpoint,
+            prompt=prompt,
+            timeout=self.llm_timeout,
+            logger=logger,
+            tag="Bank extraction",
+        )
+        if not parsed:
+            return
+
+        parsed = normalize_with_schema(parsed, BANK_FIELDS)
+
+        subtype = str(parsed.get("document_subtype", "")).strip().lower()
+        account_holder_name = str(parsed.get("account_holder_name", "")).strip()
+        account_number = str(parsed.get("account_number", "")).strip()
+        ifsc = str(parsed.get("ifsc", "")).strip().upper()
+        bank_name = str(parsed.get("bank_name", "")).strip().upper()
+
+        if subtype:
+            data["document_subtype"] = subtype
+        if account_holder_name:
+            data["account_holder_name"] = " ".join(account_holder_name.split())
+        if account_number:
+            data["account_number"] = account_number
+        if ifsc:
+            data["ifsc"] = ifsc
+        if bank_name:
+            data["bank_name"] = " ".join(bank_name.split())
+
+        logger.info("LLM-based Bank extraction applied")
+
     def run_ocr(self, image):
-        result = self.ocr.ocr(image, cls=True)
-        texts = []
-        for line in result:
-            for word in line:
-                texts.append(word[1][0])
-        return "\n".join(texts).upper()
+        lines = super()._perform_ocr(image=image, max_rotations=1, det=True, cls=True)
+        return "\n".join(lines).upper()
 
-    # -------------------------
-    # Extractors
-    # -------------------------
-    def extract_account_number(self, text):
-        match = re.search(r"\b\d{9,18}\b", text)
-        return match.group() if match else None
-
-    def extract_ifsc(self, text):
-        match = re.search(r"\b[A-Z]{4}0[A-Z0-9]{6}\b", text)
-        return match.group() if match else None
-
-    def extract_bank_name(self, text):
-        for bank in self.bank_names:
-            if bank in text:
-                return bank
-        return None
-
-    def extract_name(self, text):
-        lines = text.split("\n")
-        for line in lines:
-            if "NAME" in line and len(line.split()) >= 2:
-                return (
-                    line.replace("NAME", "")
-                    .replace(":", "")
-                    .strip()
-                )
-        return None
-
-    def detect_subtype(self, text):
-        if "CANCELLED" in text:
-            return "cancelled_cheque"
-        return "passbook"
-
-    # -------------------------
-    # Main
-    # -------------------------
     def extract_details(self, image):
         ocr_text = self.run_ocr(image)
 
-        return {
-            "document_subtype": self.detect_subtype(ocr_text),
-            "account_holder_name": self.extract_name(ocr_text),
-            "account_number": self.extract_account_number(ocr_text),
-            "ifsc": self.extract_ifsc(ocr_text),
-            "bank_name": self.extract_bank_name(ocr_text),
-            "raw_text": ocr_text
+        data = {
+            "document_subtype": "NA",
+            "account_holder_name": "NA",
+            "account_number": "NA",
+            "ifsc": "NA",
+            "bank_name": "NA",
+            "raw_text": ocr_text,
         }
+
+        self._extract_details_with_llm(ocr_text, data)
+        apply_bank_validation(data, self.bank_names)
+        return data

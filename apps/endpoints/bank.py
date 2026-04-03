@@ -1,32 +1,47 @@
 import cv2
 import numpy as np
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Request
+from fastapi.concurrency import run_in_threadpool
 
 from src.documents.BankExtractor import BankExtractor
 from src.classification.image_classification import image_classification
 from src.utils.image_loader import load_image
 from src.utils.image_saver import save_image
 from src.logger import get_logger
+from src.schemas.api_models import BankExtractionRequest, BankExtractionResponse
 
 router = APIRouter()
 logger = get_logger(__name__)
+EXPECTED_DOCUMENT_TYPE = "bank"
 
 # Initialize once (IMPORTANT)
 extractor = BankExtractor()
 
 
-@router.post("/extract")
+@router.post("/extract", response_model=BankExtractionResponse)
 async def extract_bank_document(
+    request: Request,
     document_type: str = Form(...),
     file: UploadFile = File(None),
     image_url: str = Form(None)
-):
+) -> BankExtractionResponse:
     """
     Supports:
     - Bank Passbook
     - Cancelled Cheque
     Image upload or image URL only
     """
+
+    normalized_document_type = document_type.strip().lower()
+
+    if normalized_document_type != EXPECTED_DOCUMENT_TYPE:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Invalid document_type for this endpoint. "
+                f"Use '{EXPECTED_DOCUMENT_TYPE}' for /bank/extract."
+            )
+        )
 
     if not file and not image_url:
         raise HTTPException(
@@ -52,7 +67,7 @@ async def extract_bank_document(
             logger.info("Bank document image loaded from file")
 
         else:
-            image = load_image(image_url)
+            image = await run_in_threadpool(load_image, image_url)
             logger.info("Bank document image loaded from URL")
 
         # ---------------------------
@@ -86,7 +101,7 @@ async def extract_bank_document(
         # ---------------------------
         # Validate Document Type
         # ---------------------------
-        predicted_type = image_classification(image)
+        predicted_type = await run_in_threadpool(image_classification, image)
 
         if predicted_type.lower() != document_type.lower():
             logger.warning(
@@ -103,9 +118,10 @@ async def extract_bank_document(
         # ---------------------------
         # Save image
         # ---------------------------
-        image_meta = save_image(
+        image_meta = await run_in_threadpool(
+            save_image,
             image=image,
-            prefix=document_type.lower()
+            prefix=document_type
         )
 
         logger.info(
@@ -115,21 +131,28 @@ async def extract_bank_document(
         # ---------------------------
         # Extract Bank details
         # ---------------------------
-        ocr_result = extractor.extract_details(image)
+        ocr_result = await run_in_threadpool(extractor.extract_details, image)
         logger.info("Bank extraction successful")
 
         # --------------------------------
         # Merge image path into ocr_result
         # --------------------------------
-        response = {
-            "document_type": "bank",
-            "image": {
+        image_url = str(
+            request.url_for(
+                "get_image",
+                document_type=EXPECTED_DOCUMENT_TYPE,
+                filename=image_meta["filename"],
+            )
+        )
+
+        return BankExtractionResponse(
+            document_type=EXPECTED_DOCUMENT_TYPE,
+            image={
                 "image_id": image_meta["image_id"],
-                "image_path": image_meta["filename"]
+                "image_url": image_url,
             },
-            "data": ocr_result
-        }
-        return response
+            data=ocr_result
+        )
     except HTTPException as e:
         raise
 
@@ -137,5 +160,5 @@ async def extract_bank_document(
         logger.exception("Error during bank document extraction")
         raise HTTPException(
             status_code=500,
-            detail=f"Internal server error: {str(e)}"
+            detail="Bank OCR failed due to internal error"
         )

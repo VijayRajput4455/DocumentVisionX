@@ -1,29 +1,44 @@
 import cv2
 import numpy as np
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Request
+from fastapi.concurrency import run_in_threadpool
 
 from src.documents.AadharExtracter import AadharExtractor
 from src.classification.image_classification import image_classification
 from src.utils.image_loader import load_image
 from src.utils.image_saver import save_image 
 from src.logger import get_logger
+from src.schemas.api_models import AadhaarExtractionRequest, AadhaarExtractionResponse
 
 router = APIRouter()
 logger = get_logger(__name__)
+EXPECTED_DOCUMENT_TYPE = "aadhar"
 
 # Initialize Aadhar extractor once
 extractor = AadharExtractor()
 
-@router.post("/extract")
+@router.post("/extract", response_model=AadhaarExtractionResponse)
 async def extract_aadhar(
+    request: Request,
     document_type: str = Form(...),
     file: UploadFile = File(None),
     image_url: str = Form(None)
-):
+) -> AadhaarExtractionResponse:
     """
     Accepts either a file upload or an image URL, validates document type using classifier,
     and then extracts Aadhaar details.
     """
+
+    normalized_document_type = document_type.strip().lower()
+
+    if normalized_document_type != EXPECTED_DOCUMENT_TYPE:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Invalid document_type for this endpoint. "
+                f"Use '{EXPECTED_DOCUMENT_TYPE}' for /aadhar/extract."
+            )
+        )
 
     if not file and not image_url:
         raise HTTPException(
@@ -48,10 +63,10 @@ async def extract_aadhar(
                 np.frombuffer(contents, np.uint8),
                 cv2.IMREAD_COLOR
             )
-            logger.info("PAN image loaded from uploaded file")
+            logger.info("Aadhaar image loaded from uploaded file")
         else:
-            image = load_image(image_url)
-            logger.info("PAN image loaded from URL")
+            image = await run_in_threadpool(load_image, image_url)
+            logger.info("Aadhaar image loaded from URL")
 
         # ---------------------------
         # Validate image
@@ -84,7 +99,7 @@ async def extract_aadhar(
         # ---------------------------
         # Validate document type
         # ---------------------------
-        predicted_type = image_classification(image)
+        predicted_type = await run_in_threadpool(image_classification, image)
 
         if predicted_type.lower() != document_type.lower():
             logger.warning(
@@ -101,9 +116,10 @@ async def extract_aadhar(
         # ---------------------------
         # Save image HERE
         # ---------------------------
-        image_meta = save_image(
+        image_meta = await run_in_threadpool(
+            save_image,
             image=image,
-            prefix=document_type.lower()
+            prefix=document_type
         )
 
         logger.info(
@@ -113,22 +129,28 @@ async def extract_aadhar(
         # ---------------------------
         # Extract Aadhaar details
         # ---------------------------
-        ocr_result = extractor.extract_details(image)
+        ocr_result = await run_in_threadpool(extractor.extract_details, image)
         logger.info("Aadhaar extraction successful")
 
         # --------------------------------
         # Merge image path into ocr_result
         # --------------------------------
-        response = {
-            "document_type": document_type,
-            "image": {
-                "image_id": image_meta["image_id"],
-                "image_path": image_meta["filename"]
-            },
-            "data": ocr_result
-        }
+        image_url = str(
+            request.url_for(
+                "get_image",
+                document_type=EXPECTED_DOCUMENT_TYPE,
+                filename=image_meta["filename"],
+            )
+        )
 
-        return response
+        return AadhaarExtractionResponse(
+            document_type=EXPECTED_DOCUMENT_TYPE,
+            image={
+                "image_id": image_meta["image_id"],
+                "image_url": image_url,
+            },
+            data=ocr_result
+        )
 
     except HTTPException:
         raise

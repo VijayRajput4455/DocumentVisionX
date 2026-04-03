@@ -1,31 +1,46 @@
 import cv2
 import numpy as np
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Request
+from fastapi.concurrency import run_in_threadpool
 
 from src.documents.VoterCardExtractor import VoterCardExtractor
 from src.classification.image_classification import image_classification
 from src.utils.image_loader import load_image
 from src.utils.image_saver import save_image
 from src.logger import get_logger
+from src.schemas.api_models import VoterExtractionRequest, VoterExtractionResponse
 
 router = APIRouter()
 logger = get_logger(__name__)
+EXPECTED_DOCUMENT_TYPE = "voter"
 
 # Initialize extractor once
 extractor = VoterCardExtractor()
 
-@router.post("/extract")
+@router.post("/extract", response_model=VoterExtractionResponse)
 async def extract_voter(
-    document_type: str = Form(...),   # voter
+    request: Request,
+    document_type: str = Form(...),
     file: UploadFile = File(None),
     image_url: str = Form(None)
-):
+) -> VoterExtractionResponse:
     """
     Accepts either file upload or image URL,
     validates document type,
     saves image,
     extracts Voter ID details.
     """
+
+    normalized_document_type = document_type.strip().lower()
+
+    if normalized_document_type != EXPECTED_DOCUMENT_TYPE:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Invalid document_type for this endpoint. "
+                f"Use '{EXPECTED_DOCUMENT_TYPE}' for /voter/extract."
+            )
+        )
 
     if not file and not image_url:
         raise HTTPException(
@@ -53,7 +68,7 @@ async def extract_voter(
             logger.info("Voter image loaded from uploaded file")
 
         else:
-            image = load_image(image_url)
+            image = await run_in_threadpool(load_image, image_url)
             logger.info("Voter image loaded from URL")
 
         # ---------------------------
@@ -86,7 +101,7 @@ async def extract_voter(
         # ---------------------------
         # Validate document type
         # ---------------------------
-        predicted_type = image_classification(image)
+        predicted_type = await run_in_threadpool(image_classification, image)
 
         if predicted_type.lower() != document_type.lower():
             raise HTTPException(
@@ -100,9 +115,10 @@ async def extract_voter(
         # ---------------------------
         # Save image
         # ---------------------------
-        image_meta = save_image(
+        image_meta = await run_in_threadpool(
+            save_image,
             image=image,
-            prefix=document_type.lower()
+            prefix=document_type
         )
 
         logger.info(
@@ -112,19 +128,25 @@ async def extract_voter(
         # ---------------------------
         # OCR extraction
         # ---------------------------
-        ocr_result = extractor.extract_details(image)
+        ocr_result = await run_in_threadpool(extractor.extract_details, image)
         logger.info("Voter extraction successful")
 
-        response = {
-            "document_type": document_type,
-            "image": {
-                "image_id": image_meta["image_id"],
-                "image_path": image_meta["filename"]
-            },
-            "data": ocr_result
-        }
+        image_url = str(
+            request.url_for(
+                "get_image",
+                document_type=EXPECTED_DOCUMENT_TYPE,
+                filename=image_meta["filename"],
+            )
+        )
 
-        return response
+        return VoterExtractionResponse(
+            document_type=EXPECTED_DOCUMENT_TYPE,
+            image={
+                "image_id": image_meta["image_id"],
+                "image_url": image_url,
+            },
+            data=ocr_result
+        )
 
     except HTTPException:
         raise

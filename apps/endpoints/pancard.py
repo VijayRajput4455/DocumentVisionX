@@ -1,29 +1,44 @@
 import cv2
 import numpy as np
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Request
+from fastapi.concurrency import run_in_threadpool
 
 from src.documents.PanCardExtracter import PANExtractor
 from src.classification.image_classification import image_classification
 from src.utils.image_loader import load_image
 from src.utils.image_saver import save_image
 from src.logger import get_logger
+from src.schemas.api_models import PANExtractionRequest, PANExtractionResponse
 
 router = APIRouter()
 logger = get_logger(__name__)
+EXPECTED_DOCUMENT_TYPE = "pancard"
 
 # Initialize PAN extractor once
 pan_extractor = PANExtractor()
 
-@router.post("/extract")
+@router.post("/extract", response_model=PANExtractionResponse)
 async def extract_pan(
+    request: Request,
     document_type: str = Form(...),  # e.g., "pancard"
     file: UploadFile = File(None),
     image_url: str = Form(None)
-):
+) -> PANExtractionResponse:
     """
     Accepts either a file upload or an image URL, validates document type using classifier,
     saves the image, and extracts PAN card details.
     """
+
+    normalized_document_type = document_type.strip().lower()
+
+    if normalized_document_type != EXPECTED_DOCUMENT_TYPE:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Invalid document_type for this endpoint. "
+                f"Use '{EXPECTED_DOCUMENT_TYPE}' for /pancard/extract."
+            )
+        )
 
     if not file and not image_url:
         raise HTTPException(
@@ -50,7 +65,7 @@ async def extract_pan(
             )
             logger.info("PAN image loaded from uploaded file")
         else:
-            image = load_image(image_url)
+            image = await run_in_threadpool(load_image, image_url)
             logger.info("PAN image loaded from URL")
 
         # ---------------------------
@@ -84,7 +99,7 @@ async def extract_pan(
         # ---------------------------
         # Validate document type
         # ---------------------------
-        predicted_type = image_classification(image)
+        predicted_type = await run_in_threadpool(image_classification, image)
 
         if predicted_type.lower() != document_type.lower():
             logger.warning(
@@ -101,9 +116,10 @@ async def extract_pan(
         # ---------------------------
         # Save image HERE
         # ---------------------------
-        image_meta = save_image(
+        image_meta = await run_in_threadpool(
+            save_image,
             image=image,
-            prefix=document_type.lower()
+            prefix=document_type
         )
 
         logger.info(
@@ -113,22 +129,28 @@ async def extract_pan(
         # ---------------------------
         # Extract PAN details
         # ---------------------------
-        ocr_result = pan_extractor.extract_details(image)
+        ocr_result = await run_in_threadpool(pan_extractor.extract_details, image)
         logger.info("PAN extraction successful")
 
         # ----------------------------------
         # Merge image path into ocr_result
         # ----------------------------------
-        response = {
-            "document_type": document_type,
-            "image": {
+        image_url = str(
+            request.url_for(
+                "get_image",
+                document_type=EXPECTED_DOCUMENT_TYPE,
+                filename=image_meta["filename"],
+            )
+        )
+
+        return PANExtractionResponse(
+            document_type=EXPECTED_DOCUMENT_TYPE,
+            image={
                 "image_id": image_meta["image_id"],
-                "image_path": image_meta["filename"]
+                "image_url": image_url,
             },
-            "data": ocr_result
-        }
-        
-        return response
+            data=ocr_result
+        )
 
     except HTTPException:
         raise
