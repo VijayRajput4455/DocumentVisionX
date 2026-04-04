@@ -13,3 +13,7 @@ pydantic>=2.6.0
 paddleocr>=2.7.0,<3.0.0
 paddlepaddle>=2.6.0,<3.0.0
 ultralytics>=8.2.0
+
+# Streamlit UI
+streamlit>=1.35.0
+Pillow>=10.0.0
